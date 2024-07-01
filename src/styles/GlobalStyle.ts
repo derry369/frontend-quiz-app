@@ -8,8 +8,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: "Rubik", sans-serif;
-
-
+  
 }
 
 }
