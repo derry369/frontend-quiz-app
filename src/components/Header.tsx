@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-//import ColorTheme from "./ColorTheme";
+import ColorTheme from "./ColorTheme";
 import flex from "../ui/Flex";
 import QuizIconName from "../ui/QuizIconName";
 
