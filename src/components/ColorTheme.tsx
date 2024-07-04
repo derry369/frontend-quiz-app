@@ -5,8 +5,8 @@ import flex from "../ui/Flex";
 import { useQuiz } from "../context/QuizContext";
 
 const StyledColorTheme = styled.div`
-  gap: 0.8rem;
   ${flex}
+  gap: 0.8rem;
 `;
 
 function ColorTheme() {
