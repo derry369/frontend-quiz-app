@@ -48,7 +48,7 @@ const StyledIconCon = styled.div<StyledIconConProps>`
   ${smallCon}
   background-color: ${(props) => props.$cl && `var(${props.$cl})`};
   background-image: ${(props) =>
-    props.$img && `url("./public/images/${imageMapping[props.$img]}")`};
+    props.$img && `url("images/${imageMapping[props.$img]}")`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: 2.8rem;

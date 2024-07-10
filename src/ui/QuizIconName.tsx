@@ -31,7 +31,7 @@ const StyledImgCon = styled.div<StyledImgConProps>`
   ${smallCon}
   background-color: ${(props) => props.$cl && `var(${props.$cl})`};
   background-image: ${(props) =>
-    props.$iconName && `url("/icon-${props.$iconName}.svg")`};
+    props.$iconName && `url("images/icon-${props.$iconName}.svg")`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: 2.9rem;
@@ -43,7 +43,7 @@ const StyledText = styled.h3`
 
 function QuizIconName({ name, iconName, cl }: QuizIconNameProps) {
   if (iconName === undefined || name === undefined || cl === undefined) {
-    return <Paragraph>Image is unavailble</Paragraph>;
+    return <Paragraph>Image is unavailable</Paragraph>;
   }
 
   return (
