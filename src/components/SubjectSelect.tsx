@@ -59,7 +59,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function QuizSelectQuiz() {
-  const { handleStartQuiz, handleKeyDownSelectQuiz } = useQuiz();
+  const { handleStartQuiz, handleKeyDownSelectQuiz, updateSelectedQuizSubject } = useQuiz();
   const { quizzes } = data;
   const quizRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
@@ -79,9 +79,15 @@ function QuizSelectQuiz() {
       {quizzes.map((quiz) => (
         <StyledNavLink to={`/quiz/${quiz.title}/question/1`} key={quiz.title}>
           <SelectBtn
-            handleClick={handleStartQuiz}
+            handleClick={() => {
+              handleStartQuiz();
+              updateSelectedQuizSubject(quiz.title);
+            }}
             role={`option ${quiz.title}`}
-            handleKeyDown={handleStartQuiz}
+            handleKeyDown={() => {
+              handleStartQuiz();
+              updateSelectedQuizSubject(quiz.title);
+            }}
           >
             <StyledIconCon
               key={quiz.title}

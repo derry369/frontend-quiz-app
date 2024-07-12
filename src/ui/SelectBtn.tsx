@@ -21,6 +21,8 @@ import {
     handleKeyDown?: KeyboardEventHandler<HTMLButtonElement> | undefined;
     ref?: Array<HTMLButtonElement | null>;
     tabIndex?: number;
+    ClickSelect?: MouseEventHandler<HTMLButtonElement> | undefined;
+    KeySelect?: KeyboardEventHandler<HTMLButtonElement> | undefined;
   };
   
   type AnswerProps = {

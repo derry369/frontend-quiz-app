@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-function Header() {
+function HeaderWithSubject() {
   const {location} = useQuiz();
   const {selectedQuizSubject} = useQuiz(); 
   console.log(location)
@@ -54,4 +54,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderWithSubject;

@@ -59,6 +59,9 @@ import {
       event: KeyboardEvent<HTMLButtonElement>,
       nav: NavigateFunction
     ) => void;
+    selectedQuizSubject: string;
+    updateSelectedQuizSubject: (subject: string) => void;
+    location: string;
   }
   
   type QuizProviderProps = {
@@ -276,6 +279,30 @@ import {
       },
       [isDarkMode]
     );
+
+    const [selectedQuizSubject, setSelectedQuizSubject] = useState("");
+    const updateSelectedQuizSubject = (subject: string) => {
+      setSelectedQuizSubject(subject);
+    };
+
+    const [location, setLocation] = useState(window.location.pathname);
+
+    useEffect(() => {
+      const handlePopState = () => {
+        setLocation(window.location.pathname);
+      };
+
+      window.addEventListener('popstate', handlePopState);
+      window.addEventListener('click', handlePopState);
+      window.addEventListener('keydown', handlePopState);
+
+      return () => {
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('click', handlePopState);
+      window.removeEventListener('keydown', handlePopState);
+      };
+    }, []);
+    
   
     const contextValue: QuizContextProps = {
       handleStartQuiz,
@@ -298,6 +325,9 @@ import {
       keyNextBtn,
       handleKeyResults,
       handleKeyPlayAgain,
+      selectedQuizSubject,
+      updateSelectedQuizSubject,
+      location,
     };
   
     return (
