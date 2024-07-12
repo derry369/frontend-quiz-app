@@ -4,8 +4,7 @@ import flex from "../ui/Flex";
 import smallCon from "../ui/SmallCon";
 import { useQuiz } from "../context/QuizContext";
 import data from "../assets/data/data.json";
-import { NavLink, useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 type StyledIconConProps = {
   $cl: string;
@@ -56,28 +55,30 @@ const StyledIconCon = styled.div<StyledIconConProps>`
 
 const StyledNavLink = styled(NavLink)`
   width: 100%;
+  
+  &:focus-visible {
+    outline: 3px solid black;
+    border-radius: 12px;
+  }
 `;
 
 function QuizSelectQuiz() {
-  const { handleStartQuiz, handleKeyDownSelectQuiz, updateSelectedQuizSubject } = useQuiz();
+  const { handleStartQuiz, updateSelectedQuizSubject,} = useQuiz();
   const { quizzes } = data;
-  const quizRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (quizRef.current) {
-      quizRef.current.focus();
-    }
-  }, []);
 
   return (
-    <StyledQuizSelectQuiz
-      ref={quizRef}
-      tabIndex={1}
-      onKeyDown={(e) => handleKeyDownSelectQuiz(e, navigate)}
-    >
+    <StyledQuizSelectQuiz >
       {quizzes.map((quiz) => (
-        <StyledNavLink to={`/quiz/${quiz.title}/question/1`} key={quiz.title}>
+        <StyledNavLink 
+        to={`/quiz/${quiz.title}/question/1`}
+        key={quiz.title}
+        onKeyDown={() => {
+          handleStartQuiz();
+          updateSelectedQuizSubject(quiz.title)
+        }}
+        tabIndex={0}
+        >
+        
           <SelectBtn
             handleClick={() => {
               handleStartQuiz();
@@ -87,6 +88,7 @@ function QuizSelectQuiz() {
             handleKeyDown={() => {
               handleStartQuiz();
               updateSelectedQuizSubject(quiz.title);
+
             }}
           >
             <StyledIconCon

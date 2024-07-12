@@ -72,7 +72,7 @@ function QuizQuestionsAnswers() {
   return (
     <StyledQuizQuestionsAnswers>
       <Questions question={question} id={id} />
-      <Answers
+      <Answers 
         answers={answers}
         correctAnswer={correctAnswer}
         id={idNum}

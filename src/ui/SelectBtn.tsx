@@ -108,7 +108,7 @@ import {
           aria-selected={ariaSelected}
           onKeyDown={handleKeyDown}
           ref={ref}
-          tabIndex={0}
+          tabIndex={-1}
         >
           {children}
         </StyledSelectBtn>
