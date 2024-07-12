@@ -35,7 +35,6 @@ const StyledHeader = styled.header`
 function Header() {
   const {location} = useQuiz();
   const {selectedQuizSubject} = useQuiz(); 
-  console.log(location)
   const isHomepage =location === '/';
   return (
     <StyledHeader>
