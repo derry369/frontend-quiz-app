@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 import { useEffect, useRef } from "react";
-import flex from "../ui/Flex";
-import SelectBtn from "../ui/SelectBtn";
-import selectionText from "../ui/SelectionText";
-import smallCon from "../ui/SmallCon";
+import flex from "./ui/Flex";
+import SelectBtn from "./ui/SelectBtn";
+import selectionText from "./ui/SelectionText";
+import smallCon from "./ui/SmallCon";
 import { useQuiz } from "../context/QuizContext";
-import Paragraph from "../ui/Paragraph";
+import Paragraph from "./ui/Paragraph";
 
 type AnswersProps = {
   answers?: string[] | undefined;

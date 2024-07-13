@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 import { useEffect, useRef } from "react";
 import { useParams, NavLink, useNavigate } from "react-router-dom";
-import Button from "../ui/Button";
-import flex from "../ui/Flex";
+import Button from "./ui/Button";
+import flex from "./ui/Flex";
 import Questions from "./Questions";
 import Answers from "./Answers";
 import data from "../assets/data/data.json";

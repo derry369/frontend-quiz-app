@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import ToggleTheme from "../ui/ToggleTheme";
-import Svg from "../ui/Svg";
-import flex from "../ui/Flex";
+import ToggleTheme from "./ui/ToggleTheme";
+import Svg from "./ui/Svg";
+import flex from "./ui/Flex";
 import { useQuiz } from "../context/QuizContext";
 
 const StyledColorTheme = styled.div`

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import flex from "../ui/Flex";
-import Paragraph from "../ui/Paragraph";
-import ProgressLine from "../ui/ProgressLine";
+import flex from "./ui/Flex";
+import Paragraph from "./ui/Paragraph";
+import ProgressLine from "./ui/ProgressLine";
 
 type QuestionsProps = {
   id: string | undefined;

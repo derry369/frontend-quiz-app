@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 import { useParams } from "react-router-dom";
-import flex from "../ui/Flex";
-import Paragraph from "../ui/Paragraph";
-import QuizIconName from "../ui/QuizIconName";
+import flex from "./ui/Flex";
+import Paragraph from "./ui/Paragraph";
+import QuizIconName from "./ui/QuizIconName";
 import { useQuiz } from "../context/QuizContext";
 
 type ImageMappingProps = {

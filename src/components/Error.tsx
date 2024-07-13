@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import flex from "../ui/Flex";
-import Paragraph from "../ui/Paragraph";
+import flex from "./ui/Flex";
+import Paragraph from "./ui/Paragraph";
 
 const StyledError = styled.div`
   ${flex}

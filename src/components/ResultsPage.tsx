@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
-import flex from "../ui/Flex";
+import flex from "./ui/Flex";
 import QuizHeading from "./QuizHeading";
 import FinalScore from "./FinalScore";
-import Button from "../ui/Button";
+import Button from "./ui/Button";
 import { useQuiz } from "../context/QuizContext";
 import { useEffect, useRef } from "react";
 

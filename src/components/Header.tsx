@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
 import ColorTheme from "./ColorTheme";
-import flex from "../ui/Flex";
+import flex from "./ui/Flex";
 import { useQuiz } from "../context/QuizContext";
-import QuizIconName from "../ui/QuizIconName";
+import QuizIconName from "./ui/QuizIconName";
 
 type ImageMappingProps = {
     HTML: string;

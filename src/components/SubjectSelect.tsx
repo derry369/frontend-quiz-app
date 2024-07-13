@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import SelectBtn from "../ui/SelectBtn";
-import flex from "../ui/Flex";
-import smallCon from "../ui/SmallCon";
+import SelectBtn from "./ui/SelectBtn";
+import flex from "./ui/Flex";
+import smallCon from "./ui/SmallCon";
 import { useQuiz } from "../context/QuizContext";
 import data from "../assets/data/data.json";
 import { NavLink } from "react-router-dom";

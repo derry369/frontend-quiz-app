@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Main from "./OvrCon";
-import flex from "../ui/Flex";
+import flex from "./ui/Flex";
 import { useQuiz } from "../context/QuizContext";
 
 type StyledConMainProps = {

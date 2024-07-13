@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Quiz from "./Quiz";
-import flex from "../ui/Flex";
+import flex from "./ui/Flex";
 import Header from "./Header";
 
 const StyledMain = styled.div`

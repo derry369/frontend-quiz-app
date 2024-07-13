@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import flex from "./Flex";
-import { useQuiz } from "../context/QuizContext";
+import { useQuiz } from "../../context/QuizContext";
 
 type StyledToggleThemeProp = {
   $isDarkMode: boolean;

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Headings from "../ui/Headings";
-import flex from "../ui/Flex";
-import Paragraph from "../ui/Paragraph";
+import Headings from "./ui/Headings";
+import flex from "./ui/Flex";
+import Paragraph from "./ui/Paragraph";
 
 
 interface QuizStartHeadingProps {

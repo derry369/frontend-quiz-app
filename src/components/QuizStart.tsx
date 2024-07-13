@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import flex from "../ui/Flex";
+import flex from "./ui/Flex";
 import QuizHeading from "./QuizHeading" 
 import QuizSelectQuiz from "./SubjectSelect";
 
