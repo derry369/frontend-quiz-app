@@ -280,7 +280,7 @@ import {
       [isDarkMode]
     );
 
-    const [selectedQuizSubject, setSelectedQuizSubject] = useState("");
+    const [selectedQuizSubject, setSelectedQuizSubject] = useLocalStorageState<string>("", "selectedQuizSubject");
     const updateSelectedQuizSubject = (subject: string) => {
       setSelectedQuizSubject(subject);
     };
