@@ -76,7 +76,11 @@ function QuizSelectQuiz() {
           handleStartQuiz();
           updateSelectedQuizSubject(quiz.title)
         }}
-        tabIndex={0}
+        onClick={() => {
+          handleStartQuiz();
+          updateSelectedQuizSubject(quiz.title)
+        }}
+        tabIndex={1}
         >
         
           <SelectBtn
@@ -88,8 +92,8 @@ function QuizSelectQuiz() {
             handleKeyDown={() => {
               handleStartQuiz();
               updateSelectedQuizSubject(quiz.title);
-
             }}
+            tabIndex={-1}
           >
             <StyledIconCon
               key={quiz.title}

@@ -21,8 +21,6 @@ import {
     handleKeyDown?: KeyboardEventHandler<HTMLButtonElement> | undefined;
     ref?: Array<HTMLButtonElement | null>;
     tabIndex?: number;
-    ClickSelect?: MouseEventHandler<HTMLButtonElement> | undefined;
-    KeySelect?: KeyboardEventHandler<HTMLButtonElement> | undefined;
   };
   
   type AnswerProps = {
@@ -93,6 +91,7 @@ import {
         role,
         ariaSelected,
         handleKeyDown,
+        tabIndex,
       }: SelectConProps,
       ref: ForwardedRef<HTMLButtonElement>
     ) => {
@@ -108,7 +107,7 @@ import {
           aria-selected={ariaSelected}
           onKeyDown={handleKeyDown}
           ref={ref}
-          tabIndex={-1}
+          tabIndex={tabIndex}
         >
           {children}
         </StyledSelectBtn>
